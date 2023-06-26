@@ -1,6 +1,6 @@
 # 監理站自動報名考照程式
 
-[![下載](https://github.com/micr0dust/image_saves/raw/master/img/button/btn-dl-red-ch.png?raw=true "下載")](https://github.com/micr0dust/mvdis-auto-signin/releases/download/v1.0.0/mvdis-auto-signup.zip)
+[![下載](https://github.com/micr0dust/image_saves/raw/master/img/button/btn-dl-red-ch.png?raw=true "下載")](https://github.com/micr0dust/mvdis-auto-signup/releases/download/v1.0.0/mvdis-auto-signup.zip)
 
 ## 使用方式
 
