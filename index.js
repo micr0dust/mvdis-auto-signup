@@ -141,7 +141,7 @@ function isTarget(data,user){
     const cond = [
         data.doc.indexOf(user.target)!=-1,
         data.signupTime[0]===user.date,
-        data.available
+        !isNaN(data.available)
     ];
     const sum = cond.reduce((partialSum, a) => partialSum + a, 0);
     return sum===cond.length;
