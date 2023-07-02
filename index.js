@@ -18,7 +18,7 @@ checkUpdate({
     currentVersion: pkg.version,
     user: 'micr0dust',
     branch: 'main'
-}, function(err, latestVersion, defaultMessage) {
+}, async function(err, latestVersion, defaultMessage) {
     if (!err) {
         if (latestVersion != pkg.version) {
             console.log("\x1b[44m");
@@ -28,7 +28,7 @@ checkUpdate({
             console.log("\x1b[44m  \x1b[0m     \x1b[0mhttps://github.com/micr0dust/mvdis-auto-signup");
             console.log("\x1b[44m  \x1b[0m\n\x1b[44m");
             console.log("\x1b[0m");
-            return;
+            await sleep(1000*86400);
         } else if (latestVersion == pkg.version) {
             console.log("\x1b[42m");
             console.log("\x1b[0m");
@@ -46,7 +46,7 @@ checkUpdate({
         console.log("\x1b[41m  \x1b[0m     \x1b[0mhttps://github.com/micr0dust/mvdis-auto-signup");
         console.log("\x1b[41m  \x1b[0m\n\x1b[41m");
         console.log("\x1b[0m");
-        return;
+        await sleep(1000*86400);
     }
 
     (async() => {
@@ -70,6 +70,12 @@ checkUpdate({
         }
     })();
 });
+
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
 
 async function newProcess(browser, process, user){
     const page = await browser.newPage();
